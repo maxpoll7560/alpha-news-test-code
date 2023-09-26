@@ -26,8 +26,8 @@
 
   const store = useNews()
   let { nav, news } = storeToRefs(store)
-  async function loadMore() {
 
+  async function loadMore() {
 
     const { data, error } = await useFetch(`${config.public.api}/${nav.value.current}`, {
       transform(data) {
